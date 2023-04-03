@@ -30,56 +30,58 @@
 									<h3 class="mb-4">Job Card</h3>
 									<div id="form-message-warning" class="mb-4"></div> 
 				      		<div id="msg" class="mb-4">
-				            Your message was sent, thank you!
+				            
 				      		</div>
 									<form id="contactForm" name="contactForm" class="contactForm">
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="InvoiceNumber">Invoice Number</label>
-													<input type="number" class="form-control" name="InvoiceNumber" id="InvoiceNumber" placeholder="Invoice Number">
+													<input type="number" class="form-control" required name="InvoiceNumber" id="InvoiceNumber" placeholder="Invoice Number">
 												</div>
 											</div>
 											<div class="col-md-6"> 
 												<div class="form-group">
 													<label class="label" for="VehicleNumber">Vehicle Number</label>
-													<input type="text" class="form-control" name="VehicleNumber" id="VehicleNumber" placeholder="Vehicle Number">
+													<input type="text" class="form-control" required name="VehicleNumber" id="VehicleNumber" placeholder="Vehicle Number">
 												</div>
 											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label class="label" for="OwnerName">Owner Name</label>
-													<input type="text" class="form-control" name="OwnerName" id="OwnerName" placeholder="Owner Name">
+											<div class="col-md-6" >
+												<div class="autocomplete" class="form-control">
+												  <label class="label" for="OwnerName">Customer Name</label>
+												  
+												  <input type="text" id="search-input" class="form-control" name="OwnerName" placeholder="Enter The Customer Name">
+												  <div class="autocomplete-items"></div>
 												</div>
-											</div>
+											  </div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="TechnicianName">Technician Name</label>
-													<input type="text" class="form-control" name="TechnicianName" id="TechnicianrName" placeholder="Technician Name">
+													<input type="text" class="form-control"  required name="TechnicianName" id="TechnicianrName" placeholder="Technician Name">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="TotalBill">Total Bill Amount</label>
-													<input type="number" class="form-control" name="TotalBill" id="TotalBill" placeholder="Total Bill">
+													<input type="number" class="form-control" required name="TotalBill" id="TotalBill" placeholder="Total Bill">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="LaberCharge">Labour Charge</label>
-													<input type="number" class="form-control" name="LabourCharge" id="LaberCharge" placeholder="Laber Charge">
+													<input type="number" class="form-control" required name="LabourCharge" id="LaberCharge" placeholder="Laber Charge">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="OldSpare">Old Spare Part Amount</label>
-													<input type="number" class="form-control" name="OldSpare" id="OldSpare" placeholder="Old Spare Part Amount">
+													<input type="number" class="form-control" required name="OldSpare" id="OldSpare" placeholder="Old Spare Part Amount">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="NewSpare">New Spare Part Amount</label>
-													<input type="number" class="form-control" name="NewSpare" id="NewSpare" placeholder="New Spare Part Amount">
+													<input type="number" class="form-control" required name="NewSpare" id="NewSpare" placeholder="New Spare Part Amount">
 												</div>
 											</div>
 											<div class="col-md-12">
@@ -111,41 +113,9 @@
 		</div>
 		
 	</section>
-
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/main.js"></script>
+	<script src="script.js"></script>
+	
   
-  <script>
-	let form = document.querySelector("form");
-	// The document.querySelector() method returns the first element that matches a specified CSS selector.
-	form.addEventListener('submit', (e) => {
-		e.preventDefault();
-		// The preventDefault() method stops the form from submitting and prevents the page from refreshing.
-		document.querySelector("#sub").value = "Saving..";
-		// Change the value of the submit button to "Submitting..." while the form is being submitted.
-		let data = new FormData(form);
-		// The FormData() method creates a new FormData object that contains the values of all the form fields.
-		fetch('https://script.google.com/macros/s/AKfycbwuRkVJvVOMgtkFOOdXkDe57ZOR-0MbQPpjdMmsy45Y8jIXd_ILXtwp7C7d1IDHcrDn/exec', {
-				method: "POST",
-				body: data
-			})
-			// The fetch() method is used to make a request to the server and retrieve data.
-			// This is an example API endpoint. Replace it with the actual URL for the API endpoint you want to use.
-			.then(res => res.text())
-			// The .then() method is used to handle the response from the server.
-			// The response is converted to text using the res.text() method.
-			.then(data => {
-				document.querySelector("#msg").innerHTML = data;
-				// The innerHTML property sets or returns the HTML content of an element.
-				// Here, we are setting the content of the <h1> element to the response from the server.
-				document.querySelector("#sub").value = "Save Jobcard"
-				// Change the value of the submit button back to "Submit" after the form has been submitted.
-			});
-	})
-</script>
 	</body>
 </html>
 
