@@ -46,48 +46,60 @@
 													<input type="text" class="form-control" required name="VehicleNumber" id="VehicleNumber" placeholder="Vehicle Number">
 												</div>
 											</div>
-											<div class="col-md-6" >
+											<div class="col-md-12" >
 												<div class="autocomplete" class="form-control">
 												  <label class="label" for="OwnerName">Customer Name</label>
 												  
-												  <input type="text" id="search-input" class="form-control" name="OwnerName" placeholder="Enter The Customer Name">
+												  <input type="text"  id="search-input" class="form-control" autocomplete="off" name="OwnerName" placeholder="Enter The Customer Name">
 												  <div class="autocomplete-items"></div>
 												</div>
 											  </div>
+											  <div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="CustomerNumber">Customer Number</label>
+													<input type="tel" class="form-control"  required name="CustomerNumber" id="CustomerNumber" placeholder="Customer Number">
+												</div>
+											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="TechnicianName">Technician Name</label>
-													<input type="text" class="form-control"  required name="TechnicianName" id="TechnicianrName" placeholder="Technician Name">
+													<input type="text" class="form-control" autocapitalize="on" required name="TechnicianName" id="TechnicianrName" placeholder="Technician Name">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
-													<label class="label" for="TotalBill">Total Bill Amount</label>
-													<input type="number" class="form-control" required name="TotalBill" id="TotalBill" placeholder="Total Bill">
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label class="label" for="LaberCharge">Labour Charge</label>
-													<input type="number" class="form-control" required name="LabourCharge" id="LaberCharge" placeholder="Laber Charge">
+													<label class="label" for="LabourCharge">Labour Charge</label>
+													<input type="number" class="form-control"  required name="LabourCharge" id="LabourCharge" placeholder="Labour Charge">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="OldSpare">Old Spare Part Amount</label>
-													<input type="number" class="form-control" required name="OldSpare" id="OldSpare" placeholder="Old Spare Part Amount">
+													<input type="number" class="form-control"  required name="OldSpare" id="OldSpare" placeholder="Old Spare Part Amount">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="NewSpare">New Spare Part Amount</label>
-													<input type="number" class="form-control" required name="NewSpare" id="NewSpare" placeholder="New Spare Part Amount">
+													<input type="number" class="form-control"  required name="NewSpare" id="NewSpare" placeholder="New Spare Part Amount">
 												</div>
 											</div>
-											<div class="col-md-12">
+											<div class="col-md-6">
 												<div class="form-group">
-													<label class="label" for="#">Service Details</label>
-													<textarea name="ServiceDetails" class="form-control" id="ServiceDetails" cols="30" rows="4" placeholder="Service Details"></textarea>
+													<label class="label" for="GasAmount">Gas Amount</label>
+													<input type="number" class="form-control" required name="GasAmount" id="GasAmount" placeholder="Gas Amount">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="TotalBill">Total Bill Amount</label>
+													<input type="number" class="form-control"  required name="TotalBill" id="TotalBill" placeholder="Total Bill">
+												</div>
+											</div>
+											
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="button" value="Calculate Total" id="calc" onclick="calculate()" class="btn btn-outline-secondary">
 												</div>
 											</div>
 											<div class="col-md-12">

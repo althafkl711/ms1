@@ -8355,3 +8355,16 @@ textarea.form-control {
   .autocomplete-items .highlight {
     background-color: #ddd;
   } 
+  #calc{
+   margin-top: 20px;
+   width: 150px;
+   background-color: none;
+
+  }
+  #sub{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;  }
+  .row{
+    
+  }
