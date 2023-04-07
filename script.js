@@ -253,6 +253,10 @@ let form = document.querySelector("form");
 			
            
 			var total= labourCharge  + oldSpare + newSpare + gasAmount;
+			document.getElementById('LabourCharge').value=labourCharge;
+			document.getElementById('OldSpare').value=oldSpare;
+			document.getElementById('NewSpare').value=newSpare;
+			document.getElementById('GasAmount').value=gasAmount;
 		    document.getElementById('TotalBill').value=total;
 			 
 	   }

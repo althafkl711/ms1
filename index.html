@@ -50,7 +50,7 @@
 												<div class="autocomplete" class="form-control">
 												  <label class="label" for="OwnerName">Customer Name</label>
 												  
-												  <input type="text"  id="search-input" class="form-control"  name="OwnerName" placeholder="Enter The Customer Name">
+												  <input type="text"  id="search-input" class="form-control" required name="OwnerName" placeholder="Enter The Customer Name">
 												  <div class="autocomplete-items"></div>
 												</div>
 											  </div>
@@ -81,25 +81,25 @@
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="LabourCharge">Labour Charge</label>
-													<input type="number" class="form-control"  required name="LabourCharge" id="LabourCharge" placeholder="Labour Charge">
+													<input type="number" class="form-control" required name="LabourCharge" id="LabourCharge" placeholder="Labour Charge">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="OldSpare">Old Spare Part Amount</label>
-													<input type="number" class="form-control"  required name="OldSpare" id="OldSpare" placeholder="Old Spare Part Amount">
+													<input type="number" class="form-control"   name="OldSpare" id="OldSpare" placeholder="Old Spare Part Amount">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="NewSpare">New Spare Part Amount</label>
-													<input type="number" class="form-control"  required name="NewSpare" id="NewSpare" placeholder="New Spare Part Amount">
+													<input type="number" class="form-control"   name="NewSpare" id="NewSpare" placeholder="New Spare Part Amount">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="label" for="GasAmount">Gas Amount</label>
-													<input type="number" class="form-control" required name="GasAmount" id="GasAmount" placeholder="Gas Amount">
+													<input type="number" class="form-control"  name="GasAmount" id="GasAmount" placeholder="Gas Amount">
 												</div>
 											</div>
 											<div class="col-md-6">
@@ -130,7 +130,7 @@
 											 
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="submit" value="Save Jobcard" id="sub" class="btn btn-primary">
+													<input type="submit" value="Save Jobcard" onclick="calculate()" id="sub" class="btn btn-primary">
 													<div class="submitting"></div>
 												</div>
 											</div>
