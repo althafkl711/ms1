@@ -202,7 +202,7 @@ let form = document.querySelector("form");
 			// Change the value of the submit button to "Submitting..." while the form is being submitted.
 			let data = new FormData(form);
 			// The FormData() method creates a new FormData object that contains the values of all the form fields.
-			fetch('https://script.google.com/macros/s/AKfycbwuRkVJvVOMgtkFOOdXkDe57ZOR-0MbQPpjdMmsy45Y8jIXd_ILXtwp7C7d1IDHcrDn/exec', {
+			fetch('https://script.google.com/macros/s/AKfycbx7Q5CBXf08EHfdba5XhARr9Rz6MGEf4tirYIp8UgOsk0uhDVXHntp2LJFix5iGTDXC/exec', {
 					method: "POST",
 					body: data
 				})
@@ -251,12 +251,11 @@ let form = document.querySelector("form");
 			
 			
 			
-            console.log(labourCharge);
-			console.log(gasAmount);
+           
 			var total= labourCharge  + oldSpare + newSpare + gasAmount;
-			
-			console.log(total);
-			document.getElementById('TotalBill').value=total;
+		    document.getElementById('TotalBill').value=total;
 			 
 	   }
+
+	   //
 	  
