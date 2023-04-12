@@ -261,5 +261,23 @@ let form = document.querySelector("form");
 			 
 	   }
 
-	   //
-	  
+
+ 
+// Sheet import
+
+  let SHEET_ID = '1IcBjk5Y5dmbO4Jxpbz4rKQ0iqdrJm4y5xjbmGDJbjlc'
+let SHEET_TITLE = 'Sheet1';
+let SHEET_RANGE = 'A:A';
+
+let FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
+
+fetch(FULL_URL)
+.then(res => res.text())
+.then(rep => {
+    let dataa = JSON.parse(rep.substr(47).slice(0,-2));
+	console.log(dataa.table.rows.length);
+	let rownum= dataa.table.rows.length;
+	console.log(dataa.table.rows[rownum-1].c[0].v);
+	let invoiceNum = dataa.table.rows[rownum-1].c[0].v + 1;
+	document.getElementById('InvoiceNumber').value=invoiceNum;
+})
